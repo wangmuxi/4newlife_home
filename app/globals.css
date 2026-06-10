@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --background: #05070f;
-  --foreground: #f8fafc;
+  color-scheme: light;
+  --background: #f9f9fb;
+  --foreground: #111827;
 }
 
 * {
@@ -13,22 +13,16 @@
 html {
   min-height: 100%;
   background: var(--background);
-  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100%;
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28rem),
-    radial-gradient(circle at 80% 10%, rgba(168, 85, 247, 0.16), transparent 24rem),
-    radial-gradient(circle at 50% 100%, rgba(20, 184, 166, 0.14), transparent 28rem),
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -37,101 +31,6 @@ a {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.32);
-  color: #ffffff;
-}
-
-.aurora-field {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.aurora-field::before {
-  position: absolute;
-  inset: -20%;
-  content: "";
-  background:
-    conic-gradient(from 90deg at 50% 50%, transparent, rgba(34, 211, 238, 0.16), transparent 32%),
-    conic-gradient(from 270deg at 50% 50%, transparent, rgba(217, 70, 239, 0.13), transparent 30%);
-  filter: blur(58px);
-  opacity: 0.72;
-  animation: aurora-drift 18s ease-in-out infinite alternate;
-}
-
-.aurora-field::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(circle at center, black, transparent 76%);
-  opacity: 0.42;
-}
-
-.glass-panel {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.055)),
-    rgba(15, 23, 42, 0.42);
-  box-shadow:
-    0 24px 90px rgba(0, 0, 0, 0.34),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(22px);
-}
-
-.nav-card {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.nav-card::before {
-  position: absolute;
-  inset: -1px;
-  z-index: -1;
-  content: "";
-  background: linear-gradient(
-    115deg,
-    transparent 0%,
-    transparent 30%,
-    rgba(255, 255, 255, 0.34) 47%,
-    rgba(var(--accent-rgb), 0.52) 52%,
-    transparent 70%,
-    transparent 100%
-  );
-  opacity: 0;
-  transform: translateX(-70%);
-  transition:
-    opacity 240ms ease,
-    transform 780ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.nav-card::after {
-  position: absolute;
-  inset: 1px;
-  z-index: -1;
-  content: "";
-  border-radius: inherit;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(var(--accent-rgb), 0.18), transparent 34%),
-    rgba(2, 6, 23, 0.72);
-}
-
-.nav-card:hover::before {
-  opacity: 1;
-  transform: translateX(70%);
-}
-
-@keyframes aurora-drift {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  100% {
-    transform: rotate(18deg) scale(1.12) translate3d(2%, -3%, 0);
-  }
+  background: #e5e7eb;
+  color: #111827;
 }
